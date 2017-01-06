@@ -46,9 +46,9 @@
           $.get("{{ link.url_info }}")
             .done(function(data, textStatus, jqXHR) {
               showdown.setFlavor('github');
-              var converter = new showdown.Converter(),
-                  htmlData = converter.makeHtml('#hello');
-            alert(htmlData);
+              var converter = new showdown.Converter();
+              var htmlData = converter.makeHtml('#hello');
+            alert(htmlData);alert(data);alert(converter);
               document.getElementById("{{ link.name }}").innerHTML = htmlData;
             }));
         </script>
