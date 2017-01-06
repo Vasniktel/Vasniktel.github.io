@@ -1,4 +1,4 @@
-{% for link in site.links %}
+<!--{% for link in site.links %}
       
 ## {{ link.name }}
 
@@ -6,4 +6,4 @@
 
 [Download]({{ link.url_downloads }}) | [View on GitHub]({{ link.url_repo }})
         
-{% endfor %}
+{% endfor %}-->
