@@ -12,3 +12,9 @@ projects:
     url_repo: https://github.com/Vasniktel/My-Playlist
     url_downloads: https://github.com/Vasniktel/My-Playlist/releases/latest
     url_info: https://raw.githubusercontent.com/Vasniktel/My-Playlist/master/CHANGELOG.md
+    
+  - name: My Playlist
+    description: Интернет радио плеер для PSP
+    url_repo: https://github.com/Vasniktel/My-Playlist
+    url_downloads: https://github.com/Vasniktel/My-Playlist/releases/latest
+    url_info: https://raw.githubusercontent.com/Vasniktel/My-Playlist/master/CHANGELOG.md
