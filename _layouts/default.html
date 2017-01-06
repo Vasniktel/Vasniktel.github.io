@@ -46,7 +46,7 @@
         <script type="text/javascript">
           $.get("{{ project.url_info }}")
             .done(function(data, textStatus, jqXHR) {
-             // showdown.setFlavor('github');
+              showdown.setFlavor('vanilla');
               var converter = new showdown.Converter(),
                   htmlData = converter.makeHtml(data);
               
