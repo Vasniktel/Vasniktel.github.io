@@ -6,7 +6,7 @@ description: Here is a showcase of my projects
 
 show_downloads: false
 
-links:
+content:
   - name: My Playlist
     description: Интернет радио плеер для PSP
     url_repo: https://github.com/Vasniktel/My-Playlist
