@@ -3,5 +3,7 @@
 ## {{ link.name }}
 
 {{ link.info }}
+&copy;
+
         
 {% endfor %}
