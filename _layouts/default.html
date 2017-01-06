@@ -43,6 +43,7 @@
         <div id="{{ link.name }}"></div>
         
         <script type="text/javascript">
+          alert('hello');
           alert($.get("{{ link.url_info }}")
             .done(function(data, textStatus, jqXHR) {
               showdown.setFlavor('github');
