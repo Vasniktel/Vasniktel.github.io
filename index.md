@@ -2,8 +2,8 @@
       
 ## {{ link.name }}
 
->[ &#xe415 CHANGELOG](https://raw.githubusercontent.com/Vasniktel/My-Playlist/master/README.md)
+>[CHANGELOG](https://raw.githubusercontent.com/Vasniktel/My-Playlist/master/README.md)
 
-
+{{ https://raw.githubusercontent.com/Vasniktel/My-Playlist/master/README.md }}
         
 {% endfor %}
