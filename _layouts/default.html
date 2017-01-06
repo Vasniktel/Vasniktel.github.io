@@ -46,8 +46,8 @@
         <script type="text/javascript">
           $.get("{{ project.url_info }}")
             .done(function(data, textStatus, jqXHR) {
-             // showdown.setFlavor('vanilla');
-              var converter = new showdown.Converter({simplifiedAutoLink: 'true'}),
+              showdown.setFlavor('github');
+              var converter = new showdown.Converter(),
                   htmlData = converter.makeHtml(data);
               
               document.getElementById("{{ project.name }}").innerHTML = htmlData;
