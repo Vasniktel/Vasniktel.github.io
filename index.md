@@ -3,7 +3,7 @@
 ## {{ link.name }}
 
 {{ link.info }}
-UTF+e415
+&#xe415;
 
         
 {% endfor %}
