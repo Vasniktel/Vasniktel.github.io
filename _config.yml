@@ -10,7 +10,7 @@ links:
   - name: My Playlist
     url_repo: https://github.com/Vasniktel/My-Playlist
     url_downloads: http://vasniktel.pp.ua/mypls/
-    url_info: >
+    info: >
        ## Изменения \[18.11.16](3.14):
 
        - Весь контент программы размещается по центру страницы.
