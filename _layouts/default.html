@@ -37,27 +37,28 @@
       </header>
       <section>
 
-      {% for link in site.links %}
+      {% for item in site.content %}
       
-        <h2>{{ link.name }}</h2>
-        <div id="{{ link.name }}"></div>
+        <h1>{{ item.name }}</h1>
+        <p>{{ item.description }}</p>
+        <div id="{{ item.name }}"></div>
         
         <script type="text/javascript">
-          $.get("{{ link.url_info }}")
+          $.get("{{ item.url_info }}")
             .done(function(data, textStatus, jqXHR) {
               showdown.setFlavor('github');
               var converter = new showdown.Converter(),
                   htmlData = converter.makeHtml(data);
               
-              document.getElementById("{{ link.name }}").innerHTML = htmlData;
+              document.getElementById("{{ item.name }}").innerHTML = htmlData;
             })
             .fail(function() {
-              document.getElementById("{{ link.name }}").innerHTML = "<p>Can't get any information from GitHub servers</p>";
+              document.getElementById("{{ item.name }}").innerHTML = "<p>Can't get any information from GitHub servers</p>";
             });
         </script>
                       
         <br />
-        <a href="{{ link.url_downloads }}">Download</a> | <a href="{{ link.url_repo }}">View on GitHub</a>
+        <a href="{{ item.url_downloads }}">Download</a> | <a href="{{ item.url_repo }}">View on GitHub</a>
         <br />
         <br />
         
