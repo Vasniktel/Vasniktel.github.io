@@ -2,8 +2,8 @@
       
 ## {{ link.name }}
 
-> {{ link.info }}
+{{ link.info }}
 
-[![Download](/glyphicons-182-download-alt.png) Download]({{ link.url_downloads }})
+[Download]({{ link.url_downloads }}) | [View on GitHub]({{ link.url_repo }})
         
 {% endfor %}
