@@ -2,6 +2,6 @@
       
 ## {{ link.name }}
 
-{{ link.info }}
+> {{ link.info }}
         
 {% endfor %}
