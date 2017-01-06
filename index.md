@@ -3,7 +3,7 @@
 ## {{ link.name }}
 
 {{ link.info }}
-&#xe415;
+&#xe182;
 
         
 {% endfor %}
