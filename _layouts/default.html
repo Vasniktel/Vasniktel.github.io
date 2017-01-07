@@ -46,11 +46,11 @@
         <script type="text/javascript">
           $.get("{{ project.url_info }}")
             .done(function(data, textStatus, jqXHR) {
-             // showdown.setFlavor('github');
-             // var converter = new showdown.Converter(),
-              //    htmlData = converter.makeHtml(data);
+              showdown.setFlavor('github');
+              var converter = new showdown.Converter(),
+                  htmlData = converter.makeHtml(data);
               
-              document.getElementById("{{ project.name }}").innerHTML = data;
+              document.getElementById("{{ project.name }}").innerHTML = htmlData;
             })
             .fail(function() {
               document.getElementById("{{ project.name }}").innerHTML = "<p>Can't get any information from GitHub servers</p>";
