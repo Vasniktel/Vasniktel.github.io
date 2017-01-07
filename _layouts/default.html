@@ -42,15 +42,15 @@
         <h1>{{ project.name }}</h1>
         <p>{{ project.description }}</p>
         <div id="{{ project.name }}"></div>
-        {{ site.github }}
+        
         <script type="text/javascript">
           $.get("{{ project.url_info }}")
             .done(function(data, textStatus, jqXHR) {
-              showdown.setFlavor('github');
-              var converter = new showdown.Converter(),
-                  htmlData = converter.makeHtml(data);
+             // showdown.setFlavor('github');
+             // var converter = new showdown.Converter(),
+              //    htmlData = converter.makeHtml(data);
               
-              document.getElementById("{{ project.name }}").innerHTML = htmlData;
+              document.getElementById("{{ project.name }}").innerHTML = data;
             })
             .fail(function() {
               document.getElementById("{{ project.name }}").innerHTML = "<p>Can't get any information from GitHub servers</p>";
