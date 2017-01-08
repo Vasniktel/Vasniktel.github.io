@@ -41,7 +41,9 @@
       
         <h1>{{ project.name }}</h1>
         <p>{{ project.description }}</p>
-        <div id="{{ project.name }}"></div>
+        <blockquote>
+          <div id="{{ project.name }}"></div>
+        </blockquote>
         
         <script type="text/javascript">
           $.get("{{ project.url_info }}")
