@@ -41,23 +41,29 @@
       
         <h1>{{ project.name }}</h1>
         <p>{{ project.description }}</p>
-        <blockquote>
-          <div id="{{ project.name }}"></div>
-        </blockquote>
         
-        <script type="text/javascript">
-          $.get("{{ project.url_info }}")
-            .done(function(data, textStatus, jqXHR) {
-              showdown.setFlavor('github');
-              var converter = new showdown.Converter(),
-                  htmlData = converter.makeHtml(data);
+        {% if project.url_info %}
+        
+          <blockquote>
+            <div id="{{ project.name }}"></div>
+          </blockquote>
+        
+          <script type="text/javascript">
+            $.get("{{ project.url_info }}")
+              .done(function(data, textStatus, jqXHR) {
+                showdown.setFlavor('github');
+                var converter = new showdown.Converter(),
+                    htmlData = converter.makeHtml(data);
               
-              document.getElementById("{{ project.name }}").innerHTML = htmlData;
-            })
-            .fail(function() {
-              document.getElementById("{{ project.name }}").innerHTML = "<p>Can't get any information from GitHub servers</p>";
-            });
-        </script>
+                document.getElementById("{{ project.name }}").innerHTML = htmlData;
+              })
+              .fail(function() {
+                document.getElementById("{{ project.name }}").innerHTML = "<p>Can't get any information from GitHub servers</p>";
+              });
+          </script>
+          
+        {% endif %}
+          
         <br />
         <a href="{{ project.url_downloads }}">Download</a>
         
